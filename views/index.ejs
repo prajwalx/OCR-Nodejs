@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>OCR Node App</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">  
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>Optical Character Recognition Nodejs App</h1>
+  <p>Detect Text from Image!</p> 
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 imgUp">
+      <h3>Step 1: Upload text-Image</h3>
+      <div class="imagePreview "></div>
+      
+      <form id="my-form" action="/detect" method="post"enctype="multipart/form-data">
+        <label class="btn btn-primary">
+            Upload<input type="file" name="avatar" 
+            class="uploadFile img" value="Upload Photo" 
+            style="width: 0px;height: 0px;overflow: hidden;">
+        </label>
+      </form>
+
+    </div>
+    <div class="col-sm-4">
+      <div class="text-center">
+          <h3>Step 2: Detect Text From Image </h3>
+          <br><br>         
+          <button type="button" onclick="$('#my-form').submit();" class="btn btn-outline-danger btn-lg">Detect</button>
+      </div>
+    </div>  
+    <div class="col-sm-4">
+        <div class="text-center">
+            <h3>Step 3: Results </h3>            
+            <pre></pre>            
+            <button type="button" class="btn btn-outline-dark"onclick="copyToClipboard($('pre')[0].innerHTML)">Copy</button>
+        </div>
+    </div>    
+  </div>
+
+  <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loading-modal">
+    Launch demo modal
+  </button> -->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="loading-modal"data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="loading-modalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-center col-12" id="exampleModalLongTitle">Detecting Text from image</h5>
+          <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button> -->
+        </div>
+        <div class="modal-body">
+              <div class="text-center"style="background:whitesmoke">                  
+                  <img src="https://miro.medium.com/max/978/0*cWpsf9D3g346Va20.gif" alt="" srcset=""width="80%"height="80%">                  
+              </div>
+        </div>
+        <div class="modal-footer"style="padding-bottom:0;">
+              <p class="text-center col-12">Loading ...</p>
+          <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="/javascripts/script.js"></script>
+</html>
+
+  
+  
+  <!-- 
+    
+   -->

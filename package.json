@@ -1,25 +1,19 @@
 {
   "name": "ocr-node",
-  "version": "1.0.0",
-  "description": "Sample Web App for image to text conversion",
-  "main": "index.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/prajwalx/OCR-Nodejs.git"
-  },
-  "keywords": [
-    "Node",
-    "OCR",
-    "Image",
-    "Text"
-  ],
-  "author": "Prajwal",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/prajwalx/OCR-Nodejs/issues"
-  },
-  "homepage": "https://github.com/prajwalx/OCR-Nodejs#readme"
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "^2.7.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.1",
+    "multer": "^1.4.2",
+    "tesseract.js": "^2.0.0-beta.2"
+  }
 }
