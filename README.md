@@ -1,14 +1,13 @@
 
 ## OCR-Node js App using Teseract
-#####Detect Text from Image
-###Getting Started
+Detect Text from Image
 
-###Prerequisites
+##Prerequisites
 -------------
 1. NodeJS and npm
 2. Git
 
-###Installation
+##Installation
                 
 ----
 1. Run `npm install` to install dependencies
